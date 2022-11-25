@@ -18,3 +18,21 @@ if find_subarray(arr, sum_):
     print("")
 else:
     print("No subarray found")
+    
+    
+    
+    
+    # November 25 2022
+    
+def subarray(arr, sum_):
+    for i in range(len(arr)):
+        b = arr[i]
+        for j in range(i+1, len(arr)):
+            b += arr[j]
+            if b == sum_:
+                return f'Sum found between indexes {i} and {j}'
+    return "No subarray found" 
+if __name__ == "__main__":
+    arr = [1, 4, 0, 0, 3, 10, 5]
+    sum_ = 7
+    print(subarray(arr, sum_))
